@@ -1,2 +1,2 @@
 
-export const Login = () => <>Login</>;
+export const Login: React.FC = () => <>Login</>;
