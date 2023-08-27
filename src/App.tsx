@@ -1,26 +1,25 @@
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { Home, Login } from "./pages";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+
+import { Menu } from "./components";
+import { ROUTES } from "./helpers/routes";
+import { containerStyle } from "./styles";
 
 export default function App() {
   return (
-    <Router>
+   
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/login">Login</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Home />} />
-        </Routes>
+        <Router>
+         
+            <Menu routes={ROUTES} />
+            <div className={containerStyle}>
+            <Routes>
+              {ROUTES.map(({ url, FunComponent }) => (
+                <Route path={url} element={<FunComponent />} />
+              ))}
+            </Routes>
+          </div>
+        </Router>
       </div>
-    </Router>
+
   );
 }
