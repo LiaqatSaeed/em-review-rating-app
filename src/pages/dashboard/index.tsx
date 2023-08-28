@@ -1,7 +1,20 @@
+import { buttonRecipe } from "@styles";
 import { useAuth } from "../../context/authProvider";
 
 export const Dashboard: React.FC = () => {
-  const { user } = useAuth();
+  const { user, logout } = useAuth();
 
-  return <>{user.name}'s Dashboard</>;
-};
+  const handleLogout = () => {
+    logout();
+    window.location.href = "/";
+  };
+
+  return (
+    <>
+      {user.name}'s Dashboard
+      <button onClick={handleLogout} className={buttonRecipe()}>
+        Logout
+      </button>
+    </>
+  );
+
