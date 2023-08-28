@@ -1,22 +1,45 @@
 import React from "react";
-import { Home, Login } from "../pages";
+import { Home, SignIn, SignUp, Dashboard } from "../pages";
 
 export interface IRoutesProps {
   label: string
   url: string
-  FunComponent: React.FC
+  FunComponent: React.FC,
+  isMenuItem: boolean,
 }
 
-
-export const ROUTES: IRoutesProps[] = [
+export const PUBLIC_ROUTES: IRoutesProps[] = [
   {
     label: "Home",
     url: "/",
+    isMenuItem: true,
     FunComponent:Home
   },
   {
-    label: "Login",
-    url: "/login",
-    FunComponent: Login
+    label: "SignIn",
+    url: "/sign-in",
+    isMenuItem: true,
+    FunComponent: SignIn
+  },
+  {
+    label: "SignUp",
+    isMenuItem: false,
+    url: "/sign-up",
+    FunComponent: SignUp
+  }
+];
+
+export const PROTECTED_ROUTES: IRoutesProps[] = [
+  {
+    label: "Home",
+    url: "/",
+    isMenuItem: true,
+    FunComponent:Home
+  },
+  {
+    label: "Dashboard",
+    url: "/dashboard",
+    isMenuItem: true,
+    FunComponent: Dashboard
   }
 ];

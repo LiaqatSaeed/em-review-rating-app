@@ -84,6 +84,7 @@ export const vars = createThemeContract({
     xl: ``,
   },
   fontWeight: {
+    normal: "normal",
     reqular: "",
     bold: "",
   },
@@ -106,6 +107,7 @@ const commonVars = {
     body: SYSTEM_FONT_STACK,
   },
   fontWeight: {
+    normal: "normal",
     reqular: "400",
     bold: "700",
   },
@@ -117,6 +119,10 @@ const commonVars = {
     md: `1rem`,
     lg: `1.25rem`,
     xl: `1.5rem`,
+  },
+  border: {
+    base: "1px solid",
+    solid: "2px solid",
   },
   boxShadow: {
     sm: `0 1px 2px 0 rgb(0 0 0 / 0.05)`,
@@ -136,6 +142,7 @@ export const lightThemeVars = createGlobalTheme(":root", {
   colors: {
     primary: colors.blue500,
     body: colors.gray700,
+    default: colors.gray200,
     background: colors.gray100,
     link: colors.blue800,
     linkHover: colors.blue600,
@@ -148,6 +155,7 @@ export const darkThemeVars = createGlobalTheme(":root", {
   colors: {
     primary: colors.blue400,
     body: colors.gray300,
+    default: colors.gray200,
     background: colors.gray800,
     link: colors.blue200,
     linkHover: colors.blue400,
