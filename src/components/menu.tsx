@@ -1,18 +1,21 @@
 import React from "react";
 import { IRoutesProps } from "../helpers/routes";
 import { menuItemBorderStyle, menuItemLinkStyle, menuItemStyle, menuListStyle, menuStyle } from "../styles";
+import { Link } from "@components";
+import { useAuth } from "../context/authProvider";
 
 interface IMenuProps {
   routes: IRoutesProps[];
 }
 
-export const Menu = ({ routes }: IMenuProps) => {
+export const Menu: React.FC<IMenuProps> = ({ routes }: IMenuProps) => {
+
   return (
     <div id="menu" className={menuStyle}>
       <ul className={menuListStyle}>
-        {routes.map(({ url, label }: IRoutesProps) => (
-          <li className={menuItemStyle}>
-            <a className={menuItemLinkStyle} href={url}>{label}</a>
+        {routes.map(({ url, label, isMenuItem }: IRoutesProps) => isMenuItem && (
+          <li key={label} className={menuItemStyle}>
+            <Link className={menuItemLinkStyle} to={url}>{label}</Link>
             <span className={menuItemBorderStyle}></span>
           </li>
         ))}

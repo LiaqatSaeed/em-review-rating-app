@@ -13,6 +13,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["src/components/index.ts"],
+      "@helpers": ["src/helpers/index.ts"],
+      "@styles": ["src/styles/index.ts"],
+      "@local": ["src/local/index.ts"],
+      "@epics": ["src/epics/index.ts"]
+    },
 
     /* Linting */
     "strict": true,

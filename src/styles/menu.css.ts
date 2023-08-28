@@ -23,10 +23,8 @@ export const menuItemStyle = style({
   });
 
 export const menuItemLinkStyle = style({
-  textDecoration: "none",
   padding: `${tokens.space.sm} ${tokens.space.lg}`,
-  color: tokens.colors.primary,
-  transition: "color 0.3s",
+  fontSize: `${tokens.fontSize.lg} !important`
 });
 
 export const menuItemBorderStyle = style({

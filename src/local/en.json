@@ -1,0 +1,13 @@
+{
+  "name": "Name",
+  "email": "Email",
+  "password": "password",
+  "required": "Required",
+  "notValid": "Not Valid",
+  "tooShort": "Too Short",
+  "tooLong": "Too Long",
+  "password_validation_error": "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character",
+  "notRegistered": "Not Registered?",
+  "alreadyHaveAccount": "Already have account?"
+
+}
