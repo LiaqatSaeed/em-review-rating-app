@@ -17,4 +17,4 @@ export const Dashboard: React.FC = () => {
       </button>
     </>
   );
-
+}
